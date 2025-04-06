@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>E-Commerce API</title>
+        <title>AVA Skin HealthCare API</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -21,39 +21,20 @@
     </head>
     <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
         <header class="w-full lg:max-w-4xl max-w-[335px] text-sm mb-6 not-has-[nav]:hidden">
-            @if (Route::has('login'))
-                <nav class="flex items-center justify-end gap-4">
-                    @auth
-                        <a
-                            href="{{ url('/dashboard') }}"
-                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal"
-                        >
-                            Dashboard
-                        </a>
-                    @else
-                        <a
-                            href="{{ route('login') }}"
-                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] text-[#1b1b18] border border-transparent hover:border-[#19140035] dark:hover:border-[#3E3E3A] rounded-sm text-sm leading-normal"
-                        >
-                            Log in
-                        </a>
-
-                        @if (Route::has('register'))
-                            <a
-                                href="{{ route('register') }}"
-                                class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal">
-                                Register
-                            </a>
-                        @endif
-                    @endauth
-                </nav>
-            @endif
+            <nav class="flex items-center justify-end gap-4">
+                <a href="#" class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] text-[#1b1b18] border border-transparent hover:border-[#19140035] dark:hover:border-[#3E3E3A] rounded-sm text-sm leading-normal">
+                    Log in
+                </a>
+                <a href="#" class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal">
+                    Register
+                </a>
+            </nav>
         </header>
         <div class="flex items-center justify-center w-full transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0">
             <main class="flex max-w-[335px] w-full flex-col-reverse lg:max-w-4xl lg:flex-row">
                 <div class="text-[13px] leading-[20px] flex-1 p-6 pb-12 lg:p-20 bg-white dark:bg-[#161615] dark:text-[#EDEDEC] shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] rounded-bl-lg rounded-br-lg lg:rounded-tl-lg lg:rounded-br-none">
-                    <h1 class="mb-1 font-medium text-xl">E-Commerce API</h1>
-                    <p class="mb-4 text-[#706f6c] dark:text-[#A1A09A]">Welcome to our E-Commerce API platform. <br>Access our powerful endpoints to build your e-commerce solutions.</p>
+                    <h1 class="mb-1 font-medium text-xl">AVA Skin HealthCare API</h1>
+                    <p class="mb-4 text-[#706f6c] dark:text-[#A1A09A]">Welcome to our AVA Skin HealthCare API platform. <br>Access our powerful endpoints to build your skincare solutions.</p>
                     
                     <h2 class="font-medium mt-6 mb-2">Available Endpoints</h2>
                     <ul class="flex flex-col mb-6">
@@ -104,7 +85,7 @@
                     
                     <ul class="flex gap-3 text-sm leading-normal">
                         <li>
-                            <a href="{{ route('register') }}" class="inline-block dark:bg-[#eeeeec] dark:border-[#eeeeec] dark:text-[#1C1C1A] dark:hover:bg-white dark:hover:border-white hover:bg-black hover:border-black px-5 py-1.5 bg-[#1b1b18] rounded-sm border border-black text-white text-sm leading-normal">
+                            <a href="#" class="inline-block dark:bg-[#eeeeec] dark:border-[#eeeeec] dark:text-[#1C1C1A] dark:hover:bg-white dark:hover:border-white hover:bg-black hover:border-black px-5 py-1.5 bg-[#1b1b18] rounded-sm border border-black text-white text-sm leading-normal">
                                 Get API Key
                             </a>
                         </li>
@@ -123,8 +104,8 @@
                                 <path d="M9 14C9 15.6569 10.3431 17 12 17C13.6569 17 15 15.6569 15 14C15 12.3431 13.6569 11 12 11C10.3431 11 9 12.3431 9 14Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M3 9L12 14L21 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                            <h2 class="mt-4 text-xl font-semibold text-[#F53003] dark:text-[#F61500]">E-Commerce API</h2>
-                            <p class="mt-2 text-[#706f6c] dark:text-[#A1A09A]">Build powerful shopping experiences</p>
+                            <h2 class="mt-4 text-xl font-semibold text-[#F53003] dark:text-[#F61500]">AVA Skin HealthCare API</h2>
+                            <p class="mt-2 text-[#706f6c] dark:text-[#A1A09A]">Build powerful skincare experiences</p>
                             
                             <div class="mt-8 grid grid-cols-2 gap-4 max-w-xs mx-auto">
                                 <div class="p-3 bg-white/10 dark:bg-white/5 rounded-lg text-center">
@@ -151,8 +132,6 @@
             </main>
         </div>
 
-        @if (Route::has('login'))
-            <div class="h-14.5 hidden lg:block"></div>
-        @endif
+        <div class="h-14.5 hidden lg:block"></div>
     </body>
 </html>
