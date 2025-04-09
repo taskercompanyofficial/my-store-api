@@ -81,7 +81,7 @@ class CartItemsController extends Controller
     public function show(CartItems $cartItems)
     {
         return response()->json([
-            'sucssscess' => true,
+            'status' => 'success',
             'data' => $cartItems->with('product')->get()
         ]);
     }
