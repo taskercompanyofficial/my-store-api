@@ -14,7 +14,8 @@ class UsersController extends Controller
      */
     public function index(Request $request): JsonResponse
     {
-        $users = User::all();
+        $user = $request->user();
+        $users = User::where('id', '!=', $user->id)->get();
         return response()->json([
             'status' => 'success',
             'data' => $users
@@ -64,7 +65,7 @@ class UsersController extends Controller
 
         $validated = $request->validate([
             'name' => 'sometimes|string|max:255',
-            'email' => 'sometimes|string|email|max:255|unique:users,email,'.$id,
+            'email' => 'sometimes|string|email|max:255|unique:users,email,' . $id,
             'password' => 'sometimes|string|min:8',
             'role' => 'sometimes|string',
             'image' => 'nullable|string'
