@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Authenticated\ProductsController;
+use App\Http\Controllers\Authenticated\UsersController;
 use App\Http\Controllers\Authentication\AuthenticatedSessionController;
 use App\Http\Controllers\Authentication\GoogleLoginController;
 use App\Http\Controllers\Authentication\RegisterController;
@@ -45,4 +46,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/orders', [OrderController::class, 'store']);
     Route::get('/orders/{orderNumber}', [OrderController::class, 'show']);
     Route::patch('/orders/{order}/status', [OrderController::class, 'updateStatus']);
+
+    // Users routes
+    Route::apiResource('/users', UsersController::class);
 });
