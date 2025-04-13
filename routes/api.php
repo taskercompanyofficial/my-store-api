@@ -8,6 +8,7 @@ use App\Http\Controllers\Authentication\RegisterController;
 use App\Http\Controllers\CartItemsController;
 use App\Http\Controllers\FilesController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\SettingsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -49,4 +50,6 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // Users routes
     Route::apiResource('/users', UsersController::class);
+    // Settings routes
+    Route::apiResource('/admin/settings', SettingsController::class);
 });
