@@ -46,15 +46,10 @@ class SettingsController extends Controller
     public function update(Request $request, string $key): JsonResponse
     {
         try {
+            return $request->all();
             $settings = Settings::firstOrNew(['key' => $key]);
 
-            // Ensure value is encoded as JSON before saving
-            if (is_array($request->value)) {
-                $settings->value = json_encode($request->value);
-            } else {
-                $settings->value = $request->value;
-            }
-            
+            $settings->value = $request->value;
             $settings->save();
 
             return response()->json([
