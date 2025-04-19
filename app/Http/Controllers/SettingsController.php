@@ -43,7 +43,7 @@ class SettingsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $key): JsonResponse
+    public function update(Request $request, string $key)
     {
         try {
             return $request->all();
