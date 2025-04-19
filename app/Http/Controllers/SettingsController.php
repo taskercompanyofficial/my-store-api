@@ -48,7 +48,13 @@ class SettingsController extends Controller
         try {
             $settings = Settings::firstOrNew(['key' => $key]);
 
-            $settings->value = $request->value;
+            // Ensure value is encoded as JSON before saving
+            if (is_array($request->value)) {
+                $settings->value = json_encode($request->value);
+            } else {
+                $settings->value = $request->value;
+            }
+            
             $settings->save();
 
             return response()->json([
