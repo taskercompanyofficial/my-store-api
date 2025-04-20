@@ -51,5 +51,4 @@ Route::middleware('auth:sanctum')->group(function () {
     // Users routes
     Route::apiResource('/users', UsersController::class);
     // Settings routes
-    Route::apiResource('/admin/settings', SettingsController::class);
 });
