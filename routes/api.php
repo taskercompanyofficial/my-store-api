@@ -6,6 +6,7 @@ use App\Http\Controllers\Authentication\AuthenticatedSessionController;
 use App\Http\Controllers\Authentication\GoogleLoginController;
 use App\Http\Controllers\Authentication\RegisterController;
 use App\Http\Controllers\CartItemsController;
+use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\FilesController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\SettingsController;
@@ -28,6 +29,8 @@ Route::post('/auth/register', [RegisterController::class, 'store']);
 Route::get('/products', [ProductsController::class, 'index']);
 Route::get('/products/{product}', [ProductsController::class, 'show']);
 Route::get('/settings/{key}', [SettingsController::class, 'show']);
+Route::get('/categories', [CategoriesController::class, 'index']);
+
 // Protected routes that require authentication
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('/products', [ProductsController::class, 'store']);
@@ -52,4 +55,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('/users', UsersController::class);
     // Settings routes
     Route::apiResource('/admin/settings', SettingsController::class);
+    Route::apiResource('/admin/categories', CategoriesController::class);
 });
