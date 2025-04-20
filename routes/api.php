@@ -51,8 +51,5 @@ Route::middleware('auth:sanctum')->group(function () {
     // Users routes
     Route::apiResource('/users', UsersController::class);
     // Settings routes
-    Route::post('/admin/settings', [SettingsController::class, 'store']);
-    Route::get('/admin/settings', [SettingsController::class, 'index']);
-    Route::put('/admin/settings/{key}', [SettingsController::class, 'update']);
-    Route::delete('/admin/settings/{key}', [SettingsController::class, 'destroy']);
+    Route::apiResource('/admin/settings', SettingsController::class);
 });
