@@ -27,7 +27,7 @@ Route::post('/auth/register', [RegisterController::class, 'store']);
 // Products routes - public access for fetching products
 Route::get('/products', [ProductsController::class, 'index']);
 Route::get('/products/{product}', [ProductsController::class, 'show']);
-
+Route::get('/settings/{key}', [SettingsController::class, 'show']);
 // Protected routes that require authentication
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('/products', [ProductsController::class, 'store']);
