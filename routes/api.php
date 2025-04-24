@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AddressController;
 use App\Http\Controllers\Authenticated\ProductsController;
 use App\Http\Controllers\Authenticated\UsersController;
 use App\Http\Controllers\Authentication\AuthenticatedSessionController;
@@ -56,4 +57,5 @@ Route::middleware('auth:sanctum')->group(function () {
     // Settings routes
     Route::apiResource('/admin/settings', SettingsController::class);
     Route::apiResource('/admin/categories', CategoriesController::class);
+    Route::apiResource('/addresses', AddressController::class);
 });
